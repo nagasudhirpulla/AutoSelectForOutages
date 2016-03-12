@@ -1,0 +1,25 @@
+{
+  "name": "Outages Autoselect WRLDC",
+  "description": "Auto Select Multiple Combo boxes for Outages Entry",
+  "version": "1.0",
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+		{
+			"matches": [
+				"http://103.7.130.119:8181/AddOutagesAll.aspx"
+			],
+			"js": ["injectButtons.js"]
+		}
+	],
+  "browser_action": {
+    "default_title": "Auto Select For Outages",
+	"default_icon": "icon.png"
+  },
+  "manifest_version": 2
+}
