@@ -5,7 +5,10 @@
 // Called when the user clicks on the browser action.
 chrome.browserAction.onClicked.addListener(function(tab) {
   // No tabs or host permissions needed!
+  //UNCOMMENT TO ACTIVATE BUTTON CLICK FUNCTIONALITY
+  /*
   console.log("Auto Selecting...");
   chrome.tabs.executeScript(null, {"file": "injectButtons.js"});
   chrome.tabs.executeScript(null, {"code": "onloadFunction()"});
+  */
 });
